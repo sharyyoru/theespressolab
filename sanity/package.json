@@ -6,7 +6,8 @@
     "dev": "sanity dev",
     "start": "sanity start",
     "build": "sanity build",
-    "deploy": "sanity deploy"
+    "deploy": "sanity deploy",
+    "vercel-build": "sanity build"
   },
   "dependencies": {
     "@sanity/vision": "^4.21.1",
