@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  body {
+    @apply font-sans antialiased text-espresso-black bg-white;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .container-espresso {
+    @apply max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-espresso-black text-white px-8 py-3 uppercase tracking-extra-wide text-xs font-medium hover:bg-espresso-brown transition-colors;
+  }
+
+  .btn-secondary {
+    @apply border border-espresso-black text-espresso-black px-8 py-3 uppercase tracking-extra-wide text-xs font-medium hover:bg-espresso-black hover:text-white transition-colors;
+  }
+}
