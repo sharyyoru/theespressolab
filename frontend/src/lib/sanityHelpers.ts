@@ -3,7 +3,7 @@ import { sanityClient, queries, urlFor } from './sanity';
 // Fetch site settings
 export const getSiteSettings = async () => {
   try {
-    const data = await sanityClient.fetch(queries.siteSettings);
+    const data = await (sanityClient.fetch as any)(queries.siteSettings);
     return data;
   } catch (error) {
     console.error('Error fetching site settings:', error);
@@ -14,7 +14,7 @@ export const getSiteSettings = async () => {
 // Fetch all products
 export const getProducts = async () => {
   try {
-    const data = await sanityClient.fetch(queries.products);
+    const data = await (sanityClient.fetch as any)(queries.products);
     return data;
   } catch (error) {
     console.error('Error fetching products:', error);
@@ -25,7 +25,7 @@ export const getProducts = async () => {
 // Fetch featured products
 export const getFeaturedProducts = async () => {
   try {
-    const data = await sanityClient.fetch(queries.featuredProducts);
+    const data = await (sanityClient.fetch as any)(queries.featuredProducts);
     return data;
   } catch (error) {
     console.error('Error fetching featured products:', error);
@@ -36,7 +36,7 @@ export const getFeaturedProducts = async () => {
 // Fetch collections
 export const getCollections = async () => {
   try {
-    const data = await sanityClient.fetch(queries.collections);
+    const data = await (sanityClient.fetch as any)(queries.collections);
     return data;
   } catch (error) {
     console.error('Error fetching collections:', error);
@@ -47,7 +47,7 @@ export const getCollections = async () => {
 // Fetch categories
 export const getCategories = async () => {
   try {
-    const data = await sanityClient.fetch(queries.categories);
+    const data = await (sanityClient.fetch as any)(queries.categories);
     return data;
   } catch (error) {
     console.error('Error fetching categories:', error);
